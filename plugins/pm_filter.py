@@ -760,7 +760,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"Here is what i found for your query {search} if you didn't find anything related to {search} then please check out your spelling. And if your spelling was right then we will add {search} in our database whenever it's available on ott."
+        cap = f"📂 Results For ➠ {search} \n\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n➠ Type Only Movie Name With Correct Spelling.✍️\n➠ Add Year For Better Result and don't add movie or series words in qurey🗓️\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n\n "
     if imdb and imdb.get('poster'):
         try:
           a = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
