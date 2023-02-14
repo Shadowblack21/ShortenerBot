@@ -779,12 +779,12 @@ async def auto_filter(client, msg, spoll=False):
             logger.exception(e)
             fek = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(IMDB_DELET_TIME)
-            await fek.delet()
+            await fek.delete()
         
     else:
         fuk = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
         await asyncio.sleep(IMDB_DELET_TIME)
-        await fuk.delet()
+        await fuk.delete()
     if spoll:
         await msg.message.delete()
 
